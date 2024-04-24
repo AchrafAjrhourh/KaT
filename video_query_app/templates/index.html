@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ابحث في فيديوهات القناة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            justify-content: center;
+        }
+        header {
+            background-color: #007BFF;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        form {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button i {
+            margin-left: 5px;
+        }
+        #results {
+            width: 100%;
+            max-width: 640px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        #results div {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .search-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            transition: justify-content 0.3s ease;
+        }
+        .search-container.results-shown {
+            justify-content: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ابحث في فيديوهات القناة</h1>
+    </header>
+    <div class="container">
+        <div class="search-container">
+            <form id="searchForm">
+                <input type="text" id="queryInput" placeholder="أدخل المحتوى الذي تبحث عنه...">
+                <button type="submit">ابحث <i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <div id="results"></div>
+    </div>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
